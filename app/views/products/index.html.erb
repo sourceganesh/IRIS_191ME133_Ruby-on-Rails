@@ -1,0 +1,17 @@
+<h1>The Products on sale are</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Cost</th>
+    <th>Age</th>
+  </tr>
+<% @product.each do |f|%>
+  <tr>
+    <td><%=f.name%></td>
+    <td><%=f.cost%></td>
+    <td><%=f.age%></td>
+  </tr>
+<% end %>
+
+</table>

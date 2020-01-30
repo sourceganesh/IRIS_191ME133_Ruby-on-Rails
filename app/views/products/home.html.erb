@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="frontend.css" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Raleway:600&display=swap" rel="stylesheet">
+      <title>IRIS Project</title>
+</head>
+
+
+<body class="design">
+	<div class="topNotch"></div>
+	<div class="sideNotch"></div>
+      <div class="firstTab" id="firstTab"><div class="overlay">Add your product here</div>Sell Your Product!</div>
+      <div class="secondTab" id="secondTab"><div class="overlay" style="font-size: 10px;">View Products that are on sale</div>View Products</div>
+      <div class="thirdTab"><div class="overlay">Details of your wallet</div>Wallet Details!!</div>
+	<div class="workPanel" id="nameWork2"><table align="center">
+    <tr>
+      <th>Name</th>
+      <th>Cost</th>
+      <th>Age</th>
+    </tr>
+  <% @products.each do |f|%>
+    <tr>
+      <td><%=f.name%></td>
+      <td><%=f.cost%></td>
+      <td><%=f.age%></td>
+    </tr>
+  <% end %>
+  </table></div>
+	<script >alert("Heyy there");
+    firstTab.addEventListener("click", function displayDate1() {
+      alert("You will now be redirected to Create Page");
+      window.location = "http://localhost:3000/";
+
+    });</script>
+</body>
+
+</html>

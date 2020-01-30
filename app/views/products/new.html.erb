@@ -1,0 +1,16 @@
+<html style="display: flex;
+  justify-content: center;">
+<link href="new.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<div style=" background-color:white">
+<h1 style="font-family: 'Bebas Neue', cursive; font-size:50px"> Add your Product </h1>
+<%= form_for @product do |f| %>
+  <div align=center style="font-family: 'Nanum Gothic', sans-serif; font-size:25px"><%= f.label :name%><br><%=f.text_field :name%></div>
+  <div align=center style="font-family: 'Nanum Gothic', sans-serif; font-size:25px"><%=f.label :description%><br><%=f.text_area :description%></div>
+  <div align=center style="font-family: 'Nanum Gothic', sans-serif; font-size:25px"><%=f.label :age%><br><%=f.number_field :age%></div>
+  <div align=center style="font-family: 'Nanum Gothic', sans-serif; font-size:25px"><%=f.label :cost%><br><%=f.number_field :cost%><br></div>
+  <div align=center style="font-family: 'Nanum Gothic', sans-serif; font-size:25px"><br><%= f.submit %></div>
+<% end %>
+</div>
+</html>

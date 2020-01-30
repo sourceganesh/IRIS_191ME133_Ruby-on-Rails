@@ -1,0 +1,133 @@
+html{
+  background-color: #3d3a3a;
+}
+
+body.design{
+  margin: 0;
+}
+
+div.topNotch{
+  box-sizing: border-box;
+  background-image: linear-gradient(-45deg, black, #616161, black);
+  height: 15%;
+  width: 100%;
+  position: absolute;
+}
+
+div.sideNotch{
+  box-sizing: border-box;
+  background-color : #006400;
+  height: 85%;
+  width: 15%;
+  position: absolute;
+  top: 15%;
+}
+
+div.firstTab{
+  box-sizing: border-box;
+  background-color: #36648b;
+  border-color: #c2f0e9;
+  border-width: thick;
+  border-style: solid;
+  height: 25vh;
+  width: 25vh;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 25vh;
+  font-family: 'Raleway', sans-serif;
+}
+
+div.secondTab{
+  box-sizing: border-box;
+  background-color: #36648b;
+  border-color: #c2f0e9;
+  border-width: thick;
+  border-style: solid;
+  height: 25vh;
+  width: 25vh;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 25vh;
+  font-family: 'Raleway', sans-serif;
+}
+
+div.thirdTab{
+  box-sizing: border-box;
+  border-color: #c2f0e9;
+  border-width: thick;
+  border-style: solid;
+  background-color: #36648b;
+  height: 25vh;
+  width: 57vh;
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 25vh;
+  font-family: 'Raleway', sans-serif;
+}
+
+div.workPanel{
+	  box-sizing: border-box;
+    background-color: #c2f0e9;
+  	height: 85%;
+  	width: 25%;
+  	position: absolute;
+  	top: 15%;
+	right: 0%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+div.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+  align-content: center;
+}
+
+embed{
+	height: 100%;
+	width: 100%;
+}
+@keyframes colourChange {
+  from {background-color: #36648b;} to {background-color: #c2f0e9;}
+}
+
+div.firstTab:hover .overlay{
+  opacity: 1;
+}
+
+div.secondTab:hover .overlay{
+  opacity: 1;
+}
+div.thirdTab:hover .overlay{
+  opacity: 1;
+}
