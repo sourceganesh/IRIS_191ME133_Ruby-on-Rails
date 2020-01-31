@@ -12,6 +12,7 @@ class ProductsController < ApplicationController
   def create
     # render plain: params[:product].inspect
     @product = Product.new(product_params)
+    @product.user = User.first
     @product.save
     sleep(7.0)
     redirect_to root_path
