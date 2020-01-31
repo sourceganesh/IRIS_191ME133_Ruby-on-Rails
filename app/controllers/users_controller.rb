@@ -9,10 +9,6 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to root_path
     else
-<<<<<<< HEAD
-=======
-      flash[:error] = "Invalid"
->>>>>>> authentication
       render 'new'
     end
   end
