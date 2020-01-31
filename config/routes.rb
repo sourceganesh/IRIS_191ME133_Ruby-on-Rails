@@ -15,6 +15,6 @@ Rails.application.routes.draw do
 
   get 'logout', to: "sessions#delete"
 
-  get 'buy', to: "products#new"
+  get 'buy', to: "products#buy"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

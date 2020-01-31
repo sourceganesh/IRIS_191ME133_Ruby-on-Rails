@@ -41,10 +41,11 @@ class ProductsController < ApplicationController
           @user.wallet = @user.wallet-@article.cost
           @user2.wallet += @article.cost
         else
-          flash[:error] = "No"
+          flash[:error] = "Cannot Purchase"
         end
+        @user.save
+        @user2.save
+        redirect_to root_path
       end
-
-
 
 end
