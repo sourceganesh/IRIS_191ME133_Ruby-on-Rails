@@ -25,14 +25,14 @@ class ProductsController < ApplicationController
   def buy
     @product = Product.first
     @user = User.find(session[:user_id])
-    @user2 = @product.user
-    if((@user.wallet-@product.cost)>=0)
+    if (@user.wallet-@product.cost) >=0
       @user.wallet -=@product.cost
-      @user2.wallet += @product.cost
+      @user.save
+      @user2 = @product.user
+      @user2.wallet +=@product.cost
     else
       flash[:error] = "Cannot Purchase"
     end
-    @user.save
     @user2.save
     redirect_to root_path
   end
