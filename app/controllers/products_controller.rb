@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
 
   def home
-
     @products = productall
     @users = User.all
   end
@@ -23,6 +22,21 @@ class ProductsController < ApplicationController
     @product = productall
   end
 
+  def buy
+    @product = Product.first
+    @user = User.find(session[:user_id])
+    @user2 = @product.user
+    if((@user.wallet-@product.cost)>=0)
+      @user.wallet -=@product.cost
+      @user2.wallet += @product.cost
+    else
+      flash[:error] = "Cannot Purchase"
+    end
+    @user.save
+    @user2.save
+    redirect_to root_path
+  end
+
   private
     def product_params
       params.require(:product).permit(:name, :description, :age, :cost)
@@ -31,21 +45,6 @@ class ProductsController < ApplicationController
   private
       def productall
         Product.all
-      end
-
-      def buy
-        @article = Article.find(params(:id))
-        @user = User.find(session[:user_id])
-        @user2 = @article.user
-        if((@user.wallet-@article.cost)>=0)
-          @user.wallet = @user.wallet-@article.cost
-          @user2.wallet += @article.cost
-        else
-          flash[:error] = "Cannot Purchase"
-        end
-        @user.save
-        @user2.save
-        redirect_to root_path
       end
 
 end
