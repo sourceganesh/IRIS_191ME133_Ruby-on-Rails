@@ -41,6 +41,9 @@
       <th>Cost</th>
       <th>Age</th>
       <th>Added By</th>
+      <% if logged_in? %>
+      <th>Buy</th>
+      <%end%>
     </tr>
   <% @products.each do |f|%>
     <tr>
@@ -48,6 +51,9 @@
       <td><%=f.cost%></td>
       <td><%=f.age%></td>
       <td><%=f.user.username%></td>
+      <% if logged_in? %>
+      <th><%=link_to 'Buy', buy_path(f)%></th>
+      <%end%>
     </tr>
   <% end %>
   </table></div>

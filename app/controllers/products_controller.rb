@@ -33,4 +33,18 @@ class ProductsController < ApplicationController
         Product.all
       end
 
+      def buy
+        @article = Article.find(params(:id))
+        @user = User.find(session[:user_id])
+        @user2 = @article.user
+        if((@user.wallet-@article.cost)>=0)
+          @user.wallet = @user.wallet-@article.cost
+          @user2.wallet += @article.cost
+        else
+          flash[:error] = "No"
+        end
+      end
+
+
+
 end
