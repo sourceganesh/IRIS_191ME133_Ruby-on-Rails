@@ -1,0 +1,15 @@
+<html style="display: flex;
+  justify-content: center;">
+<link href="new.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<div style=" background-color:white">
+<h1 style="font-family: 'Bebas Neue', cursive; font-size:50px"> Create User! </h1>
+<%= form_for @user do |f| %>
+  <div align=center style="font-family: 'Nanum Gothic', sans-serif; font-size:25px"><%= f.label :username%><br><%=f.text_field :username%></div>
+  <div align=center style="font-family: 'Nanum Gothic', sans-serif; font-size:25px"><%=f.label :email%><br><%=f.text_field :email%></div>
+  <div align=center style="font-family: 'Nanum Gothic', sans-serif; font-size:25px"><%=f.label :password%><br><%=f.text_field :password%></div>
+  <div align=center style="font-family: 'Nanum Gothic', sans-serif; font-size:25px"><br><%= f.submit "Sign Up!" %></div>
+<% end %>
+</div>
+</html>
