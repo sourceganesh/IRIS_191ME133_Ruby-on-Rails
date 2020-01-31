@@ -1,0 +1,14 @@
+<html style="display: flex;
+  justify-content: center;">
+<link href="new.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<div style=" background-color:white">
+<h1 style="font-family: 'Bebas Neue', cursive; font-size:50px"> Login User! </h1>
+<%= form_for :session, url: login_path do |f| %>
+  <div align=center style="font-family: 'Nanum Gothic', sans-serif; font-size:25px"><%=f.label :email%><br><%=f.text_field :email%></div>
+  <div align=center style="font-family: 'Nanum Gothic', sans-serif; font-size:25px"><%=f.label :password%><br><%=f.password_field :password, autocomplete: "off"%></div>
+  <div align=center style="font-family: 'Nanum Gothic', sans-serif; font-size:25px"><br><%= f.submit "Log In!" %></div>
+<% end %>
+</div>
+</html>
