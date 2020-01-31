@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
   def home
 
     @products = productall
+    @users = User.all
   end
 
   def new
